@@ -1,0 +1,25 @@
+/* .MainDash{
+    position: absolute;
+    top: 2%;
+    left: 17%;
+    color: #637381;
+    border-bottom: 1px solid;
+    width: 1510px;
+    margin: auto;
+    margin-left: 1rem;
+    padding: 0.5rem;
+}
+.MainCards{
+    position: absolute;
+    top: 13%;
+    left: 16%;
+    width: 100px;
+    height: 100px;
+} */
+
+.container-main {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  align-items: stretch;
+}

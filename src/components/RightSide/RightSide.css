@@ -1,0 +1,6 @@
+.RightSide{
+   
+    box-shadow: var(--Shadow-2);
+    padding: 2rem;
+    border-radius: 15px;
+}

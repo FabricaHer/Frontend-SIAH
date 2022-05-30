@@ -1,0 +1,42 @@
+.table {
+    margin-top: 50px;
+}
+.active{
+    background-color: var(--primary-100);
+    font-weight: 700;
+    color: var(--primary-main);
+    padding: 7px;
+    padding: 5px 15px;
+    border-radius: 25px;
+}
+.inactive {
+    background-color: var(--warning-100);
+    font-weight: 700;
+    color: var(--warning-main);
+    padding: 7px;
+    padding: 5px 15px;
+    border-radius: 25px;
+}
+.btn{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: var(--primary-100);
+    font-weight: 500;
+    color: var(--primary-400);
+    padding: 7px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: none;
+    width: 100px;
+    transition: background-color .5s;
+    transition-timing-function: ease-in;
+
+}
+.btn:hover{
+    background-color: var(--primary-200);
+    font-weight: 700;
+}
+.btn:focus{
+    background-color: var(--primary-main);
+    font-weight: 700;
+}

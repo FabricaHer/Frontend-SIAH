@@ -1,0 +1,21 @@
+.Updates{
+   
+    border-radius: 0.7rem;
+    padding: 1rem;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+
+}
+.update{
+    display: flex;
+    gap: 0.5rem;
+}
+.updateIcon{
+    width: 3.2rem;
+    height: 3.2rem;
+    color: rgb(207, 207, 207);
+}
+.noti>div>span:nth-of-type(1){
+    font-weight: bold;
+}

@@ -1,0 +1,7 @@
+.container-header{
+ margin-top: 2rem;
+ margin-bottom: 2rem;
+ border-bottom: 1px solid;
+ padding-bottom: 1rem;
+ border-color: var(--gray-400);
+}
