@@ -1,11 +1,9 @@
 .Updates{
-   
     border-radius: 0.7rem;
     padding: 1rem;
     gap: 1rem;
     display: flex;
     flex-direction: column;
-
 }
 .update{
     display: flex;

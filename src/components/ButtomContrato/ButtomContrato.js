@@ -1,30 +1,46 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence, AnimateSharedLayout } from 'framer-motion';
-import {ModalContratos} from "../ModalContratos/ModalContratos";
+import React, { useState } from "react";
+import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion";
+import { ModalContratos } from "../ModalContratos/ModalContratos";
+import { ButtomContratoData } from "./ButtomContratoData";
 
 export const ButtomContrato = () => {
-    const [expandir, setExpandir] = useState(false);
+  const [expanded, setExpanded] = useState(false);
 
-    // const expansion = () => {
-    //     if (expandir !== true) {
-    //         setExpandir(true);
-    //     }else{
-    //         setExpandir(false);
-    //     }
-    // };
+  const [layoutId, setLayoutId] = useState(null);
+
+  const expander = (id) => {
+    if (expanded !== true) {
+      setLayoutId(id);
+      setExpanded(true);
+    } else {
+      setExpanded(false);
+      setLayoutId(null);
+    }
+  };
 
   return (
-    <div>
+    <>
+      <div>
         <AnimateSharedLayout type="crossfade">
-            <motion.button className="btn" 
-                onClick={()=> { setExpandir(true)}}
-            >
-                Ver +
-            </motion.button>
-            <AnimatePresence>
-                {expandir && <ModalContratos setExpandir={setExpandir} />}
-            </AnimatePresence>
+          <div>
+            {ButtomContratoData.map((item) => {
+              return (
+                <motion.div
+                  className="btn"
+                  onClick={() => expander(item.id)}
+                  key={item.id}
+                  layoutId={item.id}
+                >
+                  <p>Ver +</p>
+                </motion.div>
+              );
+            })}
+          </div>
+          <AnimatePresence>
+            {expanded && <ModalContratos expander={expander} id={layoutId} />}
+          </AnimatePresence>
         </AnimateSharedLayout>
-    </div>
-  )
-}
+      </div>
+    </>
+  );
+};

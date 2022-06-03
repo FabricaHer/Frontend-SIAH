@@ -10,7 +10,8 @@ import Paper from "@mui/material/Paper";
 import "./TableContrato.css";
 import { ModalContratos } from "../ModalContratos/ModalContratos";
 import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion";
-import { ButtomContrato } from './../ButtomContrato/ButtomContrato'
+import { ButtomContrato } from './../ButtomContrato/ButtomContrato';
+
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
     backgroundColor: "var(--primary-main)",
@@ -42,9 +43,9 @@ export function TableContrato() {
       "http://192.160.35.172:4000/api/contratos?limite=5&order=DESC"
     );
     const data = await response.json();
-    setDataTable(data);
+    setDataTable(data.results);
   };
-  const getfechaActual = () => {
+  const getfechaActual = () => { 
     const fecha = new Date();
     let dia = fecha.getDate();
     let mes = fecha.getMonth() + 1;
@@ -113,7 +114,7 @@ export function TableContrato() {
         </Table>
       </TableContainer>
   
-        <ButtomContrato   />
+      <ButtomContrato   />
        
     </div>
   );
